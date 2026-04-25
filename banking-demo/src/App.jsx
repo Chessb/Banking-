@@ -90,6 +90,23 @@ function App() {
               </p>
             </Card>
 
+            <Card title="Go-live checklist" subtitle="Domain + hosting setup">
+              <ul className="list-inside list-disc space-y-2 text-sm text-slate-700">
+                <li>Choose hosting: GitHub Pages/Vercel (frontend-only) or VPS (full backend runtime).</li>
+                <li>In Namecheap DNS, add <span className="font-mono text-xs">@</span> A records and a <span className="font-mono text-xs">www</span> CNAME.</li>
+                <li>Add domain in your hosting dashboard, then enable HTTPS/SSL.</li>
+                <li>Verify propagation with <span className="font-mono text-xs">nslookup yourdomain.com</span>.</li>
+              </ul>
+            </Card>
+
+            <Card title="DNS quick map" subtitle="Common Namecheap record layout">
+              <div className="space-y-2 text-xs text-slate-700">
+                <p><span className="font-semibold">A</span> • Host: <span className="font-mono">@</span> • Value: hosting IP (or provider target IPs)</p>
+                <p><span className="font-semibold">CNAME</span> • Host: <span className="font-mono">www</span> • Value: your root domain or provider hostname</p>
+                <p><span className="font-semibold">Note:</span> keep VPS only if your backend actually runs there.</p>
+              </div>
+            </Card>
+
             <Card title="Next implementation steps" subtitle="Recommended sprint order">
               <ol className="list-inside list-decimal space-y-2 text-sm text-slate-700">
                 <li>Set up routing and page shells for the selected template.</li>

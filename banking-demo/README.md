@@ -16,6 +16,7 @@ The app provides dedicated template views for:
 - Added a **wallet connect UI panel** (mock state flow with provider buttons).
 - Expanded backend template data to include **investment + wallet APIs**.
 - Expanded admin modules with **investment oversight**.
+- Added a **go-live sidebar** with Namecheap DNS and hosting checklist guidance.
 
 ## Code organization
 
@@ -42,6 +43,28 @@ Then open the local URL shown by Vite.
 ```bash
 npm run build
 npm run preview
+```
+
+## Domain setup notes (Namecheap)
+
+### If your site is frontend-only
+
+Use a static host like **GitHub Pages**, **Vercel**, or **Netlify**. In this case, the VPS is optional and usually not needed.
+
+### If your site includes backend runtime
+
+Use your VPS (or another server runtime provider) for APIs and background jobs. Point DNS to the VPS public IP and secure it with HTTPS.
+
+### Typical Namecheap DNS records
+
+- `A` record: host `@` → your host IP (or provider-provided IP)
+- `CNAME` record: host `www` → root domain or provider target
+
+### Verify DNS
+
+```bash
+nslookup yourdomain.com
+nslookup www.yourdomain.com
 ```
 
 ## Notes
