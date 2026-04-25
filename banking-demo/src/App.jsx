@@ -35,7 +35,7 @@ function TabButton({ tab, activeTab, onChange }) {
       <p className="text-sm font-semibold">{tab.label} Template</p>
       <p className={`mt-1 text-xs ${active ? 'text-brand-50' : 'text-slate-500'}`}>{tab.description}</p>
       <div className="mt-3">
-        <div className={`h-1.5 rounded-full ${active ? 'bg-brand-400' : 'bg-slate-200'}`}>
+        <div className={`h-1.5 rounded-full ${active ? 'bg-brand-700' : 'bg-slate-200'}`}>
           <div className={`h-1.5 rounded-full ${active ? 'bg-white' : 'bg-brand-600'}`} style={{ width: `${tab.completion}%` }} />
         </div>
       </div>

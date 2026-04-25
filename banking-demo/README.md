@@ -6,17 +6,10 @@ This folder contains a banking-style **multi-purpose money website template** bu
 
 The app provides dedicated template views for:
 
-- **Frontend** (customer web app structure)
-- **Backend** (API/service architecture)
-- **Admin** (operations console structure)
-
-## New in this iteration
-
-- Added **investment package cards** to the frontend template.
-- Added a **wallet connect UI panel** (mock state flow with provider buttons).
-- Expanded backend template data to include **investment + wallet APIs**.
-- Expanded admin modules with **investment oversight**.
-- Added a **go-live sidebar** with Namecheap DNS and hosting checklist guidance.
+- **Frontend** — Customer web app structure, investment package cards, and a mock wallet-connect UI panel.
+- **Backend** — API/service architecture with investment and wallet API stubs.
+- **Admin** — Operations console structure including investment oversight.
+- **Sidebar** — Go-live guidance with Namecheap DNS quick map, hosting checklist, and a recommended next-step decision card.
 
 ## Code organization
 
@@ -50,6 +43,8 @@ npm run preview
 ### If your site is frontend-only
 
 Use a static host like **GitHub Pages**, **Vercel**, or **Netlify**. In this case, the VPS is optional and usually not needed.
+
+> **GitHub Pages + Vite note:** If you deploy to a GitHub Pages **project site** such as `https://user.github.io/repo/`, set Vite's `base` to the repository path so built asset URLs resolve correctly. For example, set `base: '/repo/'` in `vite.config.js`, or build with `vite build --base=/repo/`. If you deploy at the domain root (e.g. `https://user.github.io/` or a custom domain), an explicit `base` is usually not required.
 
 ### If your site includes backend runtime
 

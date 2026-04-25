@@ -8,7 +8,7 @@ import {
 } from '../../data/templates';
 
 function FrontendTemplate() {
-  const [selectedPackage, setSelectedPackage] = useState(investmentPackages[1].id);
+  const [selectedPackage, setSelectedPackage] = useState(investmentPackages[0]?.id ?? '');
   const [connectedWallet, setConnectedWallet] = useState('');
 
   return (
